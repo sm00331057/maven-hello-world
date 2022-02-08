@@ -14,4 +14,4 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn package /home/runner/work/maven-hello-world/my-app/pom.xml
+      run: cd my-app | mvn package | java -cp target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App
